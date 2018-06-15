@@ -4,6 +4,9 @@
 require 'capybara/cucumber'
 require 'capybara/dsl'
 
+#we can reuse POM form last time so need to require it. We require the superclass here
+require_relative '../lib/bbc_site'
+
 #CAPYBARA built around Selenium so need to configure the driver from here. Set up the driver AS WE RUN CUCUMBER
 Capybara.register_driver :chrome do |app|
   Capybara::Selenium::Driver.new(app, :browser => :chrome)
