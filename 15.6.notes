@@ -57,3 +57,6 @@ Check the feature file with the user journey on it and change the tests
 to 'and' accordingly
 
 A HOOK  is the before(:all) or each loop in the tests
+
+Cucumber re-uses tests from steps that you've already mentioned bfore in previous scenarios.
+E.g launch the bbc homepage!  cool

@@ -19,7 +19,7 @@ And("I input incorrect password details") do
  sign_in_page.fill_password_field
 end
 
-When("I click the submit button") do
+When("I try to login") do
   sign_in_page.click_sign_in_button # Write code here that turns the phrase above into concrete actions
 end
 
@@ -33,3 +33,16 @@ end
 #don't need @ anything now because we're using THE MODULE BbcSite
 #Its no longer a superclass it's a module. ANd you don't need to instantiate
 #modules they're available everywhere!
+
+#Scenario 2
+Given("I input any username details") do
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+Given("I input an incorrect password as {int}abc") do |int|
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+Then("I receive an error stating that it needs to be at least {int} chars") do |int|
+  pending # Write code here that turns the phrase above into concrete actions
+end
