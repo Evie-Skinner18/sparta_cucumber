@@ -31,5 +31,9 @@ class RandomFormValues
     @email_address = Faker::Internet.email
   end
 
+  def generate_incorrect_length_password
+    @incorrect_length_password = Faker::Internet.password(10, 20)
+  end
+
 
 end #end of class

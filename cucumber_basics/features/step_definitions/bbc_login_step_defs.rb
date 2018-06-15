@@ -36,11 +36,14 @@ end
 
 #Scenario 2
 Given("I input any username details") do
-  pending # Write code here that turns the phrase above into concrete actions
+  sign_in_page.fill_username_field
+   # Write code here that turns the phrase above into concrete actions. This wants nay username whether valid or invalid
+  #id: form-message-password
+  #text: Sorry, that password is too short. It needs to be eight characters or more.
 end
 
-Given("I input an incorrect password as {int}abc") do |int|
-  pending # Write code here that turns the phrase above into concrete actions
+Given("I input a password of incorrect length") do
+  sign_in_page.input_incorrect_length_password # Write code here that turns the phrase above into concrete actions
 end
 
 Then("I receive an error stating that it needs to be at least {int} chars") do |int|

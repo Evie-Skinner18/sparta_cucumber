@@ -12,8 +12,10 @@ class BbcSignInPage
   USERNAME_FIELD = 'user-identifier-input'
   PASSWORD_FIELD = 'password-input'
   SIGN_IN_BUTTON = 'submit-button'
-  ERROR_MESSAGE = 'Sorry, we can’t find an account with that username. If you\'re over 13, try your email address instead or get help here'
-  ERROR_MESSAGE_ID = '#form-message-username'
+  USERNAME_ERROR_MESSAGE = 'Sorry, we can’t find an account with that username. If you\'re over 13, try your email address instead or get help here'
+  USERNAME_ERROR_MESSAGE_ID = '#form-message-username'
+  PASSWORD_ERROR_MESSAGE = 'Sorry, that password is too short. It needs to be eight characters or more.'
+  PASSWORD_ERROR_ID = '#form-message-password'
 #need to instantiate the GENERATOR superclass in order to use either generator.
 #Here we'vedone that and called on it the method random_form_values which opens the
 #door to the methods contained inside the random form values gneerator.
@@ -36,11 +38,16 @@ class BbcSignInPage
   end
 
   def check_for_error_message
-    page.has_content?(ERROR_MESSAGE)
+    page.has_content?(USERNAME_ERROR_MESSAGE)
   end
 
   def get_error_message_value
-    find(ERROR_MESSAGE_ID, :text => ERROR_MESSAGE)
+    find(USERNAME_ERROR_MESSAGE_ID, :text => USERNAME_ERROR_MESSAGE)
+  end
+
+  def input_incorrect_length_password
+    @incorrect_length_password = @@random_form_generator.generate_incorrect_length_password
+    fill_in(PASSWORD_FIELD, with: "#{@incorrect_length_password}")
   end
 
 end #end of class
