@@ -27,3 +27,6 @@ Capybara.configure do |config|
 end
 
 #NOW WE'VE SET UP Capybara TO WORK INSIDE CUCUMBER
+
+#the world object is the scope of Cucumber
+World(BbcSite)

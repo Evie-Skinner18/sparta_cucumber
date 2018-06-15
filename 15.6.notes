@@ -53,3 +53,7 @@ COOL!
 
  Cucumber deson't give you 'ands' automatically so you need to go in and change some of the givens to ands
  Max two ANDs between any given or then. Any ore and the user journey is too detailed.
+Check the feature file with the user journey on it and change the tests
+to 'and' accordingly
+
+A HOOK  is the before(:all) or each loop in the tests

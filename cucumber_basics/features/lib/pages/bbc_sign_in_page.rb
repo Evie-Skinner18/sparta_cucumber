@@ -12,8 +12,8 @@ class BbcSignInPage
   USERNAME_FIELD = 'user-identifier-input'
   PASSWORD_FIELD = 'password-input'
   SIGN_IN_BUTTON = 'submit-button'
-  ERROR_MESSAGE = #'put the actual error msg in here'
-
+  ERROR_MESSAGE = 'Sorry, we can’t find an account with that username. If you\'re over 13, try your email address instead or get help here'
+  ERROR_MESSAGE_ID = '#form-message-username'
 #need to instantiate the GENERATOR superclass in order to use either generator.
 #Here we'vedone that and called on it the method random_form_values which opens the
 #door to the methods contained inside the random form values gneerator.
@@ -39,8 +39,8 @@ class BbcSignInPage
     page.has_content?(ERROR_MESSAGE)
   end
 
-  # def get_error_message_value
-  #   find_by_id(ERROR_MESSAGE).text
-  # end
+  def get_error_message_value
+    find(ERROR_MESSAGE_ID, :text => ERROR_MESSAGE)
+  end
 
 end #end of class
