@@ -60,3 +60,18 @@ A HOOK  is the before(:all) or each loop in the tests
 
 Cucumber re-uses tests from steps that you've already mentioned bfore in previous scenarios.
 E.g launch the bbc homepage!  cool
+
+Cucumber has cool reporting tools built in. Also you can get add on for Atom
+that shows you the dtep defs. Can make a HTML/JSON report
+
+create a reports fodler and from the root of the project run this command:
+cucumber -f html -o reports/test_html_report.html
+
+It will make a report in the HTML file that you've speciifed.
+
+Write some @tags to label different tests and you can run e.t this command
+cucumber -t @username
+so see that specific test/
+
+
+HOOKS
