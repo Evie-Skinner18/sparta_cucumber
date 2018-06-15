@@ -1,0 +1,55 @@
+CUCUMBER: executable specifications in plain English
+You can articulate user journeys and script them all at the same time using CUCUMBER. This allows collabotations between less techy
+poeple e.g the customer/tje BAs and the coders. Bridge the gap between business side and tech side
+
+CUCUMBER IS NOT A TESTING TOOL
+It's a lang for writing tests and a solution to automation problems. Behaviour Driven Devleopment is goin fromthe outsidde in. Get the
+requirment, build the test for the requirement, and then build the actual thing. Steps in there to do those actions.
+Get the user requirment for e.g a homepage; write a test for the homepage; build the homepage.
+Everyone can understand what's going on!
+
+gherkin syntax:  GIVEN (SET UP INITIAL STATE), WHEN (PERFORM ACTIONS), THEN (CHECK END STATE). Each given when then is a testing block
+
+Imperative and declarative: how much detail do we gvie?
+There's a lot of detail in imperative user stores: this can get v tedius and time consuming. However you don't want too little info.
+Want to find the middle way with this. Enough detail that we can write thorough tests but not too much because you know life's too short!
+
+
+STEPS:
+gem install cucumber
+
+cucumber --init
+
+All our features sit inside the features folder e.g use cases. all the features have the file extension .feature
+Spacing and capitalisiation of the words is imp.
+
+Run cucumber and see the snippets to help you write ttests!
+
+It will say sth like this:
+You can implement step definitions for undefined steps with these snippets:
+
+Given("I access the bbc login page") do
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+Given("I input incorrect username details") do
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+Given("I input incorrect password details") do
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+When("I input an incorrect username") do
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+Then("I receive and error for not finding the account") do
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+COOL!
+ Put your tests in step definitions folder
+
+ Cucumber deson't give you 'ands' automatically so you need to go in and change some of the givens to ands
+ Max two ANDs between any given or then. Any ore and the user journey is too detailed.
